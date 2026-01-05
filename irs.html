@@ -40,11 +40,11 @@
         <script src="js/tailDT.js"></script>
 <script src="js/nouislider.min.js"></script>
 <script src="js/wNumb.js"></script>
-        <script src="data/WEBcanarias_0.js"></script>
+        <script src="data/CANARIAS_0.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:false, maxZoom:28, minZoom:1
-        }).fitBounds([[26.231696761353785,-18.452279698388967],[30.830715158069058,-13.146220573177]]);
+        }).fitBounds([[27.661409156460948,-17.244888013666863],[28.558344629138674,-15.413529484635008]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -115,7 +115,7 @@
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
-        function pop_WEBcanarias_0(feature, layer) {
+        function pop_CANARIAS_0(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2"><strong>municipio</strong><br />' + (feature.properties['municipio'] !== null ? autolinker.link(String(feature.properties['municipio']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
@@ -136,11 +136,11 @@
 			layer.bindPopup(content, { maxHeight: 400 });
         }
 
-        function style_WEBcanarias_0_0(feature) {
+        function style_CANARIAS_0_0(feature) {
             switch(String(feature.properties['Vulnerabilidad '])) {
                 case 'Muy alta vulnerabilidad':
                     return {
-                pane: 'pane_WEBcanarias_0',
+                pane: 'pane_CANARIAS_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -155,7 +155,7 @@
                     break;
                 case 'Alta vulnerabilidad':
                     return {
-                pane: 'pane_WEBcanarias_0',
+                pane: 'pane_CANARIAS_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -170,7 +170,7 @@
                     break;
                 case 'Vulnerabilidad moderada':
                     return {
-                pane: 'pane_WEBcanarias_0',
+                pane: 'pane_CANARIAS_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -185,7 +185,7 @@
                     break;
                 case 'Baja vulnerabilidad':
                     return {
-                pane: 'pane_WEBcanarias_0',
+                pane: 'pane_CANARIAS_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -200,7 +200,7 @@
                     break;
                 case 'Muy baja vulnerabilidad':
                     return {
-                pane: 'pane_WEBcanarias_0',
+                pane: 'pane_CANARIAS_0',
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
                 dashArray: '',
@@ -215,22 +215,22 @@
                     break;
             }
         }
-        map.createPane('pane_WEBcanarias_0');
-        map.getPane('pane_WEBcanarias_0').style.zIndex = 400;
-        map.getPane('pane_WEBcanarias_0').style['mix-blend-mode'] = 'normal';
-        var layer_WEBcanarias_0 = new L.geoJson(json_WEBcanarias_0, {
+        map.createPane('pane_CANARIAS_0');
+        map.getPane('pane_CANARIAS_0').style.zIndex = 400;
+        map.getPane('pane_CANARIAS_0').style['mix-blend-mode'] = 'normal';
+        var layer_CANARIAS_0 = new L.geoJson(json_CANARIAS_0, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_WEBcanarias_0',
-            layerName: 'layer_WEBcanarias_0',
-            pane: 'pane_WEBcanarias_0',
-            onEachFeature: pop_WEBcanarias_0,
-            style: style_WEBcanarias_0_0,
+            dataVar: 'json_CANARIAS_0',
+            layerName: 'layer_CANARIAS_0',
+            pane: 'pane_CANARIAS_0',
+            onEachFeature: pop_CANARIAS_0,
+            style: style_CANARIAS_0_0,
         });
-        bounds_group.addLayer(layer_WEBcanarias_0);
-        map.addLayer(layer_WEBcanarias_0);
+        bounds_group.addLayer(layer_CANARIAS_0);
+        map.addLayer(layer_CANARIAS_0);
         var overlaysTree = [
-            {label: 'WEB — canarias<br /><table><tr><td style="text-align: center;"><img src="legend/WEBcanarias_0_Muyaltavulnerabilidad0.png" /></td><td>Muy alta vulnerabilidad</td></tr><tr><td style="text-align: center;"><img src="legend/WEBcanarias_0_Altavulnerabilidad1.png" /></td><td>Alta vulnerabilidad</td></tr><tr><td style="text-align: center;"><img src="legend/WEBcanarias_0_Vulnerabilidadmoderada2.png" /></td><td>Vulnerabilidad moderada</td></tr><tr><td style="text-align: center;"><img src="legend/WEBcanarias_0_Bajavulnerabilidad3.png" /></td><td>Baja vulnerabilidad</td></tr><tr><td style="text-align: center;"><img src="legend/WEBcanarias_0_Muybajavulnerabilidad4.png" /></td><td>Muy baja vulnerabilidad</td></tr></table>', layer: layer_WEBcanarias_0},]
+            {label: 'CANARIAS<br /><table><tr><td style="text-align: center;"><img src="legend/CANARIAS_0_Muyaltavulnerabilidad0.png" /></td><td>Muy alta vulnerabilidad</td></tr><tr><td style="text-align: center;"><img src="legend/CANARIAS_0_Altavulnerabilidad1.png" /></td><td>Alta vulnerabilidad</td></tr><tr><td style="text-align: center;"><img src="legend/CANARIAS_0_Vulnerabilidadmoderada2.png" /></td><td>Vulnerabilidad moderada</td></tr><tr><td style="text-align: center;"><img src="legend/CANARIAS_0_Bajavulnerabilidad3.png" /></td><td>Baja vulnerabilidad</td></tr><tr><td style="text-align: center;"><img src="legend/CANARIAS_0_Muybajavulnerabilidad4.png" /></td><td>Muy baja vulnerabilidad</td></tr></table>', layer: layer_CANARIAS_0},]
         var lay = L.control.layers.tree(null, overlaysTree,{
             //namedToggle: true,
             //selectorBack: false,
